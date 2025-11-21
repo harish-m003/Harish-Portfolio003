@@ -1,0 +1,112 @@
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.sectionTitle {
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 3rem;
+  color: #ffffff;
+  font-weight: 700;
+  text-shadow: 0 0 20px rgba(139, 92, 246, 0.5);
+}
+.contact {
+  padding: 5rem 0;
+  background: linear-gradient(180deg, #0a0015 0%, #1a0033 50%, #000000 100%);
+  position: relative;
+}
+.contactContent {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+}
+.contactInfo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.contactIntro {
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+  color: #c0c0c0;
+}
+.contactDetails {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+.contactItem {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-size: 1rem;
+  color: #d0d0d0;
+}
+.contactIcon {
+  font-size: 1.5rem;
+}
+.contactForm {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+.formGroup {
+  display: flex;
+  flex-direction: column;
+}
+.formInput {
+  padding: 1rem;
+  border: 2px solid rgba(139, 92, 246, 0.4);
+  border-radius: 12px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  font-family: inherit;
+  background: rgba(26, 0, 51, 0.5);
+  backdrop-filter: blur(10px);
+  color: #ffffff;
+  box-shadow: inset 0 2px 8px rgba(0, 0, 0, 0.4),
+    0 0 0 0 rgba(139, 92, 246, 0.5);
+}
+#text {
+  resize: vertical;
+  min-height: 120px;
+}
+.submitButton {
+  padding: 1rem 2rem;
+  background: linear-gradient(135deg, #8b5cf6 0%, #6d28d9 50%, #8b5cf6 100%);
+  background-size: 200% 100%;
+  color: white;
+  border-radius: 12px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.4s ease;
+  box-shadow: 0 8px 25px rgba(139, 92, 246, 0.5);
+  inset: 0 1px 1px rgba(255, 255, 255, 0.3), 0 0 40px rgba(139, 92, 246, 0.3);
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  position: relative;
+  overflow: hidden;
+}
+.formStatus {
+  text-align: center;
+  color: #4caf50;
+  font-weight: 600;
+}
+
+@media(max-Width:768px){
+  .contactContent{
+    display: flex;
+    flex-direction: column;
+  }
+  .contactInfo{
+    display: grid;
+  }
+  .contactIntro{
+    font-size: 1rem;
+  }
+  .contactItem{
+    font-size: 0.9rem;
+  }
+}

@@ -1,0 +1,9 @@
+*{
+    font-family:'poppins',sans-serif;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+section{
+    scroll-margin-top: 72px;
+}
