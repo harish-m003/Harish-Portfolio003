@@ -3,6 +3,7 @@ import { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {faGithub, faInstagram, faLinkedin} from '@fortawesome/free-brands-svg-icons';
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
+import { Link } from "react-router-dom";
 
 
 
@@ -22,9 +23,9 @@ const Footer = () => {
         <div style={styles.footerContent}>
           <div style={styles.socialLinks}>
             {socialLinks.map((link, index) => (
-              <a
+              <Link
                 key={index}
-                href={link.url}
+               to={link.url}
                 style={{
                   ...styles.socialLink,
                   transform:
@@ -39,7 +40,7 @@ const Footer = () => {
                 onMouseLeave={() => setHoveredSocial(null)}
               >
                 <FontAwesomeIcon icon={link.icon}/>
-              </a>
+              </Link>
             ))}
           </div>
           <p style={styles.copyright}>

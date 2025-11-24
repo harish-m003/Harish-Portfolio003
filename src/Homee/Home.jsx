@@ -1,5 +1,6 @@
 import React from "react";
 import { useState }from "react";
+import { Link } from "react-router-dom";
 
 
 
@@ -14,9 +15,8 @@ function Home(){
         <p style={styles.heroDescription}>
         I Design. I Build. I Create for the Web.
         </p>
-        <a 
-          // href="#contact" 
-          href="https://drive.google.com/file/d/1IZQn-ghEEPj57tZe4KknFVQjbwWXF7pf/view?usp=drive_link"
+        <Link
+         to="https://drive.google.com/file/d/1IZQn-ghEEPj57tZe4KknFVQjbwWXF7pf/view?usp=drive_link"
           style={{
             ...styles.ctaButton,
             transform: isHovered ? 'scale(1.05)' : 'scale(1)',
@@ -28,7 +28,7 @@ function Home(){
           onMouseLeave={() => setIsHovered(false)}
         >
           Resume
-        </a>
+        </Link>
       </div>
     </section>
         </div>

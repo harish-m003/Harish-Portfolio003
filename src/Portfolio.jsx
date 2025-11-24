@@ -6,20 +6,26 @@ import Projects from "./Projectss/Project";
 import Skills from "./Skill/Skills";
 import Contact from "./Contactus/Contact";
 import Footer from "./Footer/Footer";
-import './Style.css';
-
+import "./Style.css";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 function portfolio() {
   return (
-    <div>
+    <BrowserRouter>
       <Navigation />
-      <Home/>
+      <Routes>
+        <Route path="/" element={<Home />} />
+      </Routes>
       <About />
-      <Projects />
+      <Routes>
+        <Route path="/" element={<Projects />} />
+      </Routes>
       <Skills />
       <Contact />
-      <Footer />
-    </div>
+      <Routes>
+        <Route path="/" element={<Footer/>}/>
+      </Routes>
+    </BrowserRouter>
   );
 }
 export default portfolio;

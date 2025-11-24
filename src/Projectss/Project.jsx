@@ -1,6 +1,7 @@
 import React from "react";
 import { useState } from "react";
 import "./Project.css"
+import { Link } from "react-router-dom";
 
 
 function Projects(){
@@ -13,7 +14,7 @@ function Projects(){
       title: "E-Commerce Platform",
       description: "A fully responsive e-commerce solution with cart functionality, payment integration, and admin dashboard.",
       image: "🛒",
-      link: "#",
+      link: "https://harishm-portfolio.netlify.app/",
       github: "#"
     },
     {
@@ -66,9 +67,9 @@ function Projects(){
                 <h3 className="projectTitle">{project.title}</h3>
                 <p className="projectDescription">{project.description}</p>
                 <div className="projectLinks">
-                  <a 
+                  <Link
                   className="projectLink"
-                    href={project.link} 
+                    to={project.link} 
                     style={{
                   
                       transform: hoveredLink === `${project.id}-link` ? 'scale(1.1)' : 'scale(1)',
@@ -77,10 +78,10 @@ function Projects(){
                     onMouseLeave={() => setHoveredLink(null)}
                   >
                     View Demo
-                  </a>
-                  <a 
+                  </Link>
+                  <Link
                   className="projectLink"
-                    href={project.github} 
+                    to={project.github} 
                     style={{
                       
                       transform: hoveredLink === `${project.id}-github` ? 'scale(1.1)' : 'scale(1)',
@@ -89,7 +90,7 @@ function Projects(){
                     onMouseLeave={() => setHoveredLink(null)}
                   >
                     GitHub
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>
