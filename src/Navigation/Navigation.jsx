@@ -112,6 +112,7 @@ function Navigation() {
 export default Navigation;
 
 /* styles same as you used (kept for brevity; paste your styles object here) */
+
 const styles = {
   container: { maxWidth: "1200px", margin: "0 auto", padding: "0 2rem" },
   navbar: {

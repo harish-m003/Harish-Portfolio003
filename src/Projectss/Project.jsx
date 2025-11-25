@@ -11,33 +11,33 @@ function Projects(){
   const projects = [
     {
       id: 1,
-      title: "E-Commerce Platform",
-      description: "A fully responsive e-commerce solution with cart functionality, payment integration, and admin dashboard.",
-      image: "🛒",
+      title: "Portfolio",
+      description: "Designed and developed a personal portfolio website using React JS to effectively showcase projects and technical skills.",
+      image: "📱",
       link: "https://harishm-portfolio.netlify.app/",
-      github: "#"
+      github: "https://github.com/harish-m003/harish-portfolio"
     },
     {
       id: 2,
-      title: "Task Management App",
-      description: "Collaborative task manager with real-time updates, team features, and productivity analytics.",
+      title: "Netflix Landing Page",
+      description: "Netflix-style landing page built with React.js,featuring responsive design and interactive elements.",
       image: "✓",
-      link: "#",
-      github: "#"
+      link: "https://streaming-landing-page.netlify.app/",
+      github: "https://github.com/harish-m003/netflix-landing-page"
     },
     {
       id: 3,
-      title: "Weather Dashboard",
-      description: "Interactive weather application with location-based forecasts and beautiful data visualizations.",
-      image: "🌤",
-      link: "#",
+      title: "E-Commerce Platform",
+      description: "A responsive website built using HTML,CSS,and JavaScript,designed for seamless mobile shopping.",
+      image: "🛒",
+      link: "https://e-commercemobile-60033617032.development.catalystserverless.in/app/index.html",
       github: "#"
     },
     {
       id: 4,
-      title: "Portfolio CMS",
-      description: "Content management system for creative professionals to showcase their work with custom themes.",
-      image: "📱",
+      title: "Add Projects",
+      description: "",
+      image: "",
       link: "#",
       github: "#"
     }
