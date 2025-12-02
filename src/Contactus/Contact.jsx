@@ -1,5 +1,5 @@
-import React from "react";
-import { useState } from "react";
+import React, { useState } from "react";
+import emailjs from "emailjs-com";
 import "./Contact.css";
 
 const Contact = () => {
@@ -8,30 +8,48 @@ const Contact = () => {
     email: "",
     message: "",
   });
+
   const [status, setStatus] = useState("");
   const [isButtonHovered, setIsButtonHovered] = useState(false);
 
   const handleChange = (e) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value,
-    });
+    setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    setStatus("Message sent successfully! Thank You");
-    setFormData({ name: "", email: "", message: "" });
-    setTimeout(() => setStatus(""), 3000);
+
+    emailjs
+      .send(
+        "service_aildt08",
+        "template_kpkydon",
+        {
+          name: formData.name,
+          email: formData.email,
+          message: formData.message,
+          to_email: "harishm2021elect105@gmail.com",
+        },
+        "n0Gro6kVrd4jDUT6R"
+      )
+      .then(
+        () => {
+          setStatus("Message sent successfully! Thank You");
+          setFormData({ name: "", email: "", message: "" });
+          setTimeout(() => setStatus(""), 3000);
+        },
+        () => {
+          setStatus("Failed to send message. Please try again.");
+        }
+      );
   };
 
   return (
     <section className="contact" id="contact">
-      <div  className="container">
+      <div className="container">
         <h2 className="sectionTitle">Get In Touch</h2>
         <div className="contactContent">
-          <div  className="contactInfo">
-            <p  className="contactIntro">
+          <div className="contactInfo">
+            <p className="contactIntro">
               I'm always open to discussing new projects, creative ideas, or
               opportunities to be part of your vision.
             </p>
@@ -44,13 +62,13 @@ const Contact = () => {
                 <span className="contactIcon">📱</span>
                 <span>+91 63853 55128</span>
               </div>
-              <div  className="contactItem">
-                <span  className="contactIcon">📍</span>
+              <div className="contactItem">
+                <span className="contactIcon">📍</span>
                 <span>Dharmapuri , TamilNadu</span>
               </div>
             </div>
           </div>
-          <div  className="contactForm">
+          <div className="contactForm">
             <div className="formGroup">
               <input
                 type="text"
@@ -71,7 +89,6 @@ const Contact = () => {
                 onChange={handleChange}
                 required
                 className="formInput"
-                
               />
             </div>
             <div className="formGroup">
@@ -100,7 +117,7 @@ const Contact = () => {
             >
               Send Message
             </button>
-            {status && <p className="formStatus" >{status}</p>}
+            {status && <p className="formStatus">{status}</p>}
           </div>
         </div>
       </div>
@@ -109,4 +126,3 @@ const Contact = () => {
 };
 
 export default Contact;
-
